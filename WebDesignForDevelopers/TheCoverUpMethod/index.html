@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Zakrywanie Nagłówków Grafikami</title>
+  <style>
+    a {display: block;}
+
+    /*
+    first we need to do is turn the h2 tag into a container with a
+    width and height that matches the image we will place
+    */
+
+    #heading {
+      margin: 0;
+      overflow: hidden;
+      padding: 0;
+      position: relative;
+      width: 200px;
+      height: 32px;
+    }
+
+    /*
+    we turn the span element, which is an inline element, into a block
+    element, so that it can have a width and height applied.
+
+    we use position: absolute to position the element using coordinates
+    that are relative to the h2 element (this element’s parent),
+    which we just specified to use relative positioning.
+
+    we turn off any margins and padding on this span, just to be
+    safe, and then we load the image into the span as a background image
+    */
+    #heading span {
+      background:url("img/heading.png") top left no-repeat;
+      display: block;
+      margin: 0;
+      padding: 0;
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 200px;
+      height: 32px;
+      z-index: 1;
+    }
+
+
+    /*
+    No we cover up a link using the same method
+    We need to change the display property of an a elem
+    to block so it can have width and height
+    */
+    #covered-link {
+      display: block;
+      margin: 0;
+      overflow: hidden;
+      padding: 0;
+      position: relative;
+      width: 200px;
+      height: 32px;
+    }
+
+    #covered-link span {
+      background:url("img/link.png") top left no-repeat;
+      display: block;
+      margin: 0;
+      padding: 0;
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 200px;
+      height: 32px;
+      z-index: 1;
+    }
+
+    /*
+    Transparency
+
+    The transparent parts of the image let the words show through.
+    We fix that using another CSS image replacement technique known as
+    Langridge/Leahy Image Replacement (LIR)
+
+    http://www.kryogenix.org/code/browser/lir/
+
+    We change the height of the span to 0 and then set the top padding
+    of the span to the height of the image
+    */
+
+    #transparent-heading {
+      font-size: 10px;
+      margin: 0;
+      padding: 32px 0 0;
+      overflow: hidden;
+      position: relative;
+      width: 200px;
+      height: 0;
+    }
+
+    #transparent-heading span {
+      background:url("img/transparent-heading.png") top left no-repeat;
+      display: block;
+      margin: 0;
+      padding: 0;
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 200px;
+      height: 32px;
+      z-index: 1;
+    }
+
+  </style>
+</head>
+<body>
+  <div>
+    <h1>Cover Up Method</h1>
+
+    <p>
+      Metody tej uzywamy, gdy chcemy mieć ładne np. nagłówki w formie grafik
+      ale nie chcemy tracić samej tekstowej treści nagłówków, z których
+      korzystają wyszukiwarki internetowe.
+    </p>
+
+    <h2 id="heading">
+      Ten nagłówek jest zakryty przez grafikę
+      <span></span>
+    </h2>
+
+    <a id="covered-link" href="../">
+      Ten link jest zakryty przez grafikę
+      <span></span>
+    </a>
+
+    <h2 id="transparent-heading">
+      Ten nagłówek jest zakryty przez przezroczystą grafikę
+      <span></span>
+    </h2>
+
+    <a href="../">back</a>
+
+  </div>
+</body>
+</html>

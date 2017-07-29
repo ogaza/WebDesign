@@ -1,0 +1,75 @@
+<! Doctype html>
+
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Dwie kolumny i Sticky Footer</title>
+  <link href="css/reset.css" rel="stylesheet"/>
+  <link href="css/sticky-footer.css" rel="stylesheet"/>
+
+  <style>
+    .col-content {
+      background-color: rgb(175, 175, 175);
+      margin: 10px;
+    }
+
+    .header-content {
+      background-color: rgb(175, 175, 175);
+    }
+
+    .page-footer {
+      background-color: rgb(66, 95, 156);
+      clear: both;
+
+      margin: 0px auto;
+      max-width: 800px;
+    }
+
+    .page-header {
+      clear: both;
+      padding: 10px;
+    }
+
+    .page-wrap {
+      background-color: rgb(125, 125, 125);
+      margin: 0 auto -50px;
+      max-width: 800px;
+    }
+
+    #col1 {
+      float: left;
+      width: 50%;
+    }
+
+    #col2 {
+      float: left;
+      width: 50%;
+    }
+
+  </style>
+
+</head>
+<body>
+  <div class="page-wrap">
+    <div class="page-header">
+      <div class="header-content">
+        <h1>Dwie kolumny z tłem wrappera</h1>
+      </div>
+    </div>
+    <div id="col1">
+      <div class="col-content">
+        <h2>column 1</h2>
+      </div>
+    </div>
+    <div id="col2">
+      <div class="col-content">
+        <h2>column 2</h2>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      </div>
+    </div>
+  </div>
+  <div class="page-footer">
+    This is footer
+  </div>
+</body>
+</html>
