@@ -1,0 +1,31 @@
+
+.page-wrap {
+  margin: 0 auto;
+  max-width: 800px;
+}
+
+.page-header {
+  height: 60px;
+}
+
+.page-content {
+  /* float left so the columns have the background from page-content elem */
+  /*float: left;*/
+}
+
+.column {
+  float: left;
+  width: 50%;
+}
+
+.page-footer {
+  margin: 0 auto;
+  max-width: 800px;
+}
+
+.page-footer-content {
+}
+
+.clear-both {
+  clear: both;
+}

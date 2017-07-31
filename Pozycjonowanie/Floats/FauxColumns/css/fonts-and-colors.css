@@ -1,0 +1,28 @@
+
+body {
+  /*background-image: url("img/2000x1-50x50.png");
+  background-position: 50% 0;
+  background-repeat: repeat-y;*/
+
+  background-color: #CCC;
+  font-family: Helvetica, "Trebuchet MS", Verdana, sans-serif;
+}
+
+h1 {
+  font-size: 20px;
+}
+
+.page-wrap {
+  background-image: url("../img/2000x1-50x50.png");
+  background-position: 50% 0;
+  background-repeat: repeat-y;
+}
+
+.page-header {
+  background-color: #AAA;
+}
+
+
+.page-footer {
+  background-color: #AAA;
+}

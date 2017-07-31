@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Faux Columns</title>
+
+  <link href="css/reset.css" rel="stylesheet"/>
+  <link href="css/layout.css" rel="stylesheet"/>
+  <link href="css/sticky-footer.css" rel="stylesheet"/>
+  <link href="css/fonts-and-colors.css" rel="stylesheet"/>
+
+	<style>
+	  a {display: block;}
+
+    p {
+      padding: 5px;
+    }
+	</style>
+</head>
+<body>
+  <div class="page-wrap">
+    <div class="page-header">
+      <h1>Faux Columns for Liquid Layouts</h1>
+    </div>
+    <div class="page-content">
+      <div class="column">
+        <!-- <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p> -->
+        <p>
+          Using CSS for layouts can be a problem when using backgrounds
+          for two columns that are not of equal length.
+        </p>
+        <p>
+          If your two columns each have a different background color,
+          how do you make the colours extend to the bottom of the page
+          using css?
+        </p>
+        <p>
+          The best solution involves tiling a background on the page,
+          to give the appearance of two distinct columns that extend
+          the full length of the page.
+        </p>
+        <p>
+          This solution can be used to apply a background to
+          a page when the layout is liquid, using background positioning.
+        </p>
+        <p>
+          Background positioning can allow us to give our background
+          the appearance of being liquid. When you positioning
+          a background using pixels, you position the top left corner
+          of the image.
+        </p>
+        <p>
+          When you position a background using percentages or keywords,
+          you position a point within the image itself.
+        </p>
+        <a href="../">back</a>
+      </div>
+      <div class="column">
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </p>
+      </div>
+
+      <!--
+      floats can affect the element that contains them (their "parent"
+      element). If this parent element contained nothing but floated
+      elements, the height of it would literally collapse to nothing.
+      This isn't always obvious if the parent doesn't contain any
+      visually noticeable background, but it is important to be aware of.
+
+      Collapsing almost always needs to be dealt with to prevent strange
+      layout and cross-browser problems. We fix it by clearing the float
+      after the floated elements in the container but before the close of
+      the container.
+     -->
+
+      <!-- <div class="clear-both"> -->
+      </div>
+    </div>
+  </div>
+  <div class="page-footer">
+    <div class="page-footer-content">
+      Footer
+    </div>
+  </div>
+</body>
+</html>

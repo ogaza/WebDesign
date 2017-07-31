@@ -1,0 +1,23 @@
+* {
+  margin: 0;
+}
+
+html, body {
+  height: 100%;
+}
+
+.page-wrap {
+  /* equal to footer height */
+  margin-bottom: -50px;
+  min-height: 100%;
+}
+.page-wrap:after {
+  content: "";
+  display: block;
+  /* .push must be the same height as footer */
+  height: 50px;
+}
+
+.page-footer {
+  height: 50px;
+}
