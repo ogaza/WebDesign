@@ -1,0 +1,82 @@
+<! Doctype html>
+
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Dwie kolumny</title>
+  <link href="css/reset.css" rel="stylesheet"/>
+  <style>
+
+    html, body {
+      height: 100%;
+    }
+
+    .page-wrap {
+      margin: 0 auto;
+      max-width: 800px;
+    }
+
+    .page-header,
+    .page-footer {
+      background-color: rgb(125, 125, 125);
+      clear: both;
+      padding: 10px;
+    }
+
+    .column {
+      float: left;
+      width: 50%;
+    }
+
+    .header-content,
+    .footer-content,
+    .column-content {
+      background-color: rgb(175, 175, 175);
+    }
+
+    .page-content {
+      /* float left so the columns inherit background color */
+      float: left;
+      background-color: rgb(100, 100, 100);
+    }
+
+    .left-column-margin {
+      margin: 10px 5px 10px 10px;
+    }
+
+    .right-column-margin {
+      margin: 10px 10px 10px 5px;
+    }
+
+  </style>
+
+</head>
+<body>
+  <div class="page-wrap">
+    <div class="page-header">
+      <div class="header-content">
+        <h1>Dwie kolumny z tłem wrappera</h1>
+      </div>
+    </div>
+    <div class="page-content">
+      <div class="column">
+        <div class="column-content left-column-margin">
+          <h2>column 1</h2>
+          <a href="../">back</a>
+        </div>
+      </div>
+      <div class="column">
+        <div class="column-content right-column-margin">
+          <h2>column 2</h2>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </div>
+      </div>
+    </div>
+    <div class="page-footer">
+      <div class="footer-content">
+        footer
+      </div>
+    </div>
+  </div>
+</body>
+</html>
