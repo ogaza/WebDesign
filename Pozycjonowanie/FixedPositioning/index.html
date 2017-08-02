@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Fixed positioning</title>
+
+  <link href="css/reset.css" rel="stylesheet"/>
+
+	<style>
+	  a {
+      background-color: #CCC;
+      border: 1px solid black;
+      display: block;
+      text-decoration: none;
+      width: 100px;
+    }
+
+    a:hover {
+      background-color: #EEE;
+      border-color: gray;
+    }
+
+    b {
+      font-weight: bold;
+    }
+
+    body,
+    .page-header-content {
+      width: 500px;
+      margin: 0 auto;
+    }
+
+    p {
+      background-color: #BBB;
+      border: 1px solid black;
+      margin: 5px 0;
+      padding: 10px;
+    }
+
+    p[fake-content] {
+      background-color: #EEE;
+      border-color: #CCC;
+      color: #AAA;
+    }
+
+    .page-header {
+      position: fixed;
+      background: gray;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 40px;
+      /*z-index: 1;*/
+    }
+
+    .page-content {
+      margin: 40px 0 0;
+      padding-bottom: 50px;
+      /*position: relative;*/
+    }
+
+    .positioned-fixed {
+      background-color: #CCC;
+      margin: 0;
+      position: fixed;
+      top: 40px;
+      left: 0;
+
+      width: calc((100% - 498px)/2);
+      box-sizing: border-box;
+    }
+
+	</style>
+</head>
+<body>
+  <div class="page-header">
+    <div class="page-header-content">
+      <h1>Absolute positioning</h1>
+      This header has fixed positioning.
+    </div>
+  </div>
+  <div class="page-content">
+    <p>
+      Fixed positioning is similar to absolute positioning,
+      with the exception that the element's containing block
+      is the viewport.
+      In the example below, box "One" is fixed at 80 pixels
+      from the top of the page and 10 pixels from the left.
+      Even after scrolling, it remains in the same place relative
+      to the viewport.
+    </p>
+    <p>
+      This can be used to create a floating
+      element that stays in the same position regardless of scrolling.
+    </p>
+    <p class="positioned-fixed">
+      This element has its position fixed.
+    </p>
+
+    <p fake-content>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    </p>
+    <p fake-content>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    </p>
+    <p fake-content>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    </p>
+    <p fake-content>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    </p>
+    <p fake-content>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    </p>
+    <p fake-content>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    </p>
+
+    <a href="../">back</a>
+  </div>
+</body>
+</html>

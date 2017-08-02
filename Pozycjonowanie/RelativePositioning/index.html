@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+    <title>Relative positioning</title>
+	<style>
+	  a {display: block;}
+
+    body {
+      border: 1px solid gray;
+      width: 500px;
+      margin: 0 auto;
+    }
+
+    p {
+      /*background: aqua;*/
+      border: 2px solid blue;
+      padding: 10px;
+      margin: 10px;
+    }
+
+    span {
+      /*background: red;*/
+      border: 1px solid black;
+    }
+
+    .positioned {
+      position: relative;
+      /*background: yellow;*/
+      background: gray;
+      top: 20px;
+      left: 30px;
+    }
+
+	</style>
+</head>
+<body>
+  <h1>Relative positioning</h1>
+  <div>
+    <p>
+      Relative positioning displays the elemnt in normal dosument flow.
+      The top, left, bottom right properties only move the element from
+      its default position.
+    </p>
+    <p>
+      Relatively positioned elements are offset a given amount from
+      their normal position within the document,
+      but without the offset affecting other elements.
+    </p>
+    <p class="positioned">
+      This element has the width of its parent and the height of its content
+      as normal elemt does, but this element has also a relative position.
+    </p>
+    <p>
+      inline elements <span>like this one</span> and
+      <span>this one</span> sit on the same line as one another,
+      and adjacent text nodes, if there is space on the same line.
+      Overflowing inline elements <span>wrap onto a new line if possible —
+      like this one containing text</span>.
+    </p>
+    <a href="../">back</a>
+  </div>
+</body>
+</html>
