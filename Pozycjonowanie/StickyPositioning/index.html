@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Sticky positioning</title>
+
+  <link href="css/reset.css" rel="stylesheet"/>
+
+	<style>
+	  a {
+      background-color: #CCC;
+      border: 1px solid black;
+      display: block;
+      text-decoration: none;
+      width: 100px;
+    }
+
+    a:hover {
+      background-color: #EEE;
+      border-color: gray;
+    }
+
+    b {
+      font-weight: bold;
+    }
+
+    body,
+    .page-header-content {
+      width: 600px;
+      margin: 0 auto;
+    }
+
+    p {
+      background-color: #BBB;
+      border: 1px solid black;
+      margin: 5px 0;
+      padding: 10px;
+    }
+
+    p[fake-content] {
+      background-color: #EEE;
+      border-color: #CCC;
+      color: #AAA;
+    }
+
+    p[content] {
+    }
+
+    .page-header {
+      border-bottom: 1px solid black;
+      position: fixed;
+      background: gray;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 40px;
+
+      /*
+      both page header and page-content are positioned
+      but the content is later in the source code
+      and therefore displays over the page-header
+      To change this order we need to give the page-header
+      higher z-index.
+      */
+
+      z-index: 1;
+    }
+
+    .position-sticky-1 {
+      background-color: #CCC;
+      position: sticky;
+      top: 40px;
+    }
+
+    .position-sticky-2 {
+      margin-top: 20px;
+      position: sticky;
+      top: 83px;
+    }
+
+    .position-sticky-3 {
+      background-color: #999;
+      position: sticky;
+      top: 40px;
+    }
+
+    .position-sticky-4 {
+      background-color: #777;
+      position: sticky;
+      top: 83px;
+    }
+
+    .page-content {
+      margin: 45px 0 0;
+      position: relative;
+    }
+
+    .column-left {
+      float: left;
+      width: 49%;
+    }
+
+    .column-left-absolute {
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      width: 49%;
+    }
+
+    .column-right {
+      float: right;
+      width: 49%;
+    }
+
+    .clearfix {
+      clear: both;
+    }
+
+	</style>
+</head>
+<body>
+  <div class="page-header">
+    <div class="page-header-content">
+      <h1>Sticky Positioning</h1>
+      This header has fixed positioning.
+    </div>
+  </div>
+  <div class="page-content">
+    <div class="column-left-absolute">
+      <p fake-content>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      </p>
+      <p class="position-sticky-1">
+        This element has a sticky position.
+      </p>
+      <a href="../" class="position-sticky-2">back</a>
+    </div>
+    <div class="column-right">
+      <p content>
+        Sticky positioning can be thought of as a hybrid of relative
+        and fixed positioning. A stickily positioned element is
+        treated as relatively positioned until it crosses a specified
+        threshold, at which point it is treated as fixed.
+      </p>
+      <p content>
+        For example <code>position: sticky; top: 10px;</code>
+        would position an element relatively until the screen were scrolled
+        such that the element would be less than 10 pixels from the top.
+        Beyond that the element would be fixed to 10 pixels from the top.
+      </p>
+      <p class="position-sticky-1">
+        This element has a sticky position.
+      </p>
+      <p fake-content>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      </p>
+      <p class="position-sticky-3">
+        This element has a sticky position as well.
+      </p>
+      <p fake-content>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      </p>
+      <p fake-content>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      </p>
+      <p fake-content>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      </p>
+      <p class="position-sticky-4">
+        Another sticky positioned element.
+      </p>
+      <p fake-content>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      </p>
+      <p fake-content>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      </p>
+      <p fake-content>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      </p>
+    </div>
+    <div class="clearfix"></div>
+  </div>
+</body>
+</html>
