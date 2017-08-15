@@ -1,0 +1,52 @@
+
+article {
+  padding: 10px;
+  margin: 5px;
+
+  flex: 1;
+}
+
+body {
+  /*border: 1px solid gray;
+  width: 500px;
+  margin: 0 auto;*/
+  margin: 0;
+}
+
+section {
+  display: flex;
+  /*flex-direction: column;*/
+}
+
+.align-items-center {
+  align-items: center;
+}
+
+.justify-content-space-between {
+  justify-content: space-between;
+}
+
+
+.nestes-flexbox {
+  display: flex;
+}
+
+.flex-flow-column {
+  flex-flow: column;
+}
+
+.nestes-flexbox-elem {
+  background: #BBB;
+  margin: 5px;
+}
+
+.nestes-flexbox-2 {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.nestes-flexbox-2-elem {
+  margin: 5px;
+  background: darkkhaki;
+  flex: 1 200px;
+}

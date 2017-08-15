@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Flexbox</title>
+  <link href="css/layout.css" rel="stylesheet"/>
+	<style>
+
+    html {
+      font-family: sans-serif;
+    }
+
+    a {
+      display: block;
+      background: gray;
+      width: 100px;
+    }
+
+    article {
+      background: aqua;
+    }
+
+    header {
+      background: purple;
+      height: 100px;
+    }
+
+    h1 {
+      text-align: center;
+      color: white;
+      line-height: 100px;
+      margin: 0;
+    }
+
+	</style>
+</head>
+<body>
+
+  <header>
+    <h1>
+      Flexbox example
+    </h1>
+  </header>
+
+  <section>
+
+    <article>
+      <h2>
+        1
+      </h2>
+
+      <p>
+        Tworzenie układu strony przy użyciu floatów i pozycjonowania może być równie
+        owocne co frustrujące. Stosując to technologie, rozwiązania takie jak
+      </p>
+      <ul>
+        <li>
+          wartykalnie wycentrowany blok wewnątrz innego bloku
+        </li>
+        <li>
+          kilka bloków równej wysokości/szerokości wewnątrz innego bloku
+        </li>
+        <li>
+          układ strony złożony z kilku kolumn równej wysokości niezależnie od ich
+          zawartości
+        </li>
+      </ul>
+      <p>
+        moga być bardzo trudne lub niemożliwe do osiągnięcia.
+      </p>
+      <a href="../">back</a>
+    </article>
+
+    <article>
+      <h2>
+        2
+      </h2>
+
+      <p>
+        By ułożyć w elastyczne pudełka, należy nadać ich nadrzednemu elemnetowi
+        atrybut <code>display: flex;</code>. Ten nadrzędny element staje się wtedy
+        tak zwanym flex container'em, elementy wewnątrz niego "flex element'ami".
+      </p>
+      <p>
+        Podobnie dla elmentów typu inline możemy użyć atrybutu
+        <code>display: inline-flex;</code>.
+      </p>
+      <p>
+        Domyslnie flexbox dzieli zawartość bloku na kolumny. Jeeśli chcemy
+        to zminić na wiersze, to wystarczy do stylowania flex kontenera dodać
+        atrybut <code>flex-direction: column;</code>
+      </p>
+      <p>
+        Problemem, który moze się pojawić gdy flex kontener jest ustalonej
+        szerokości, jest to, że flex elementy moga zacząc sie wylewać poza kontener.
+        Tutaj z pomocą przychodzi atrybut <code>flex-wrap: wrap;</code>. Dzięki
+        niemu flex konterer zoatnie dodatkowo podzielony na wiersze, jeslli zajdzie
+        taka potrzeba.
+      </p>
+    </article>
+
+    <article>
+      <h2>
+        3
+      </h2>
+
+      <p>
+        Deklaracja <code>flex: 200px;</code> w stylu flex elementu spowoduje, że
+        taki element będzi miał conajmniej 200px szerokości.
+      </p>
+      <p>
+        Do sterowania proporcajmi wolnego miejsca pozostalego po obliczeniu
+        paddingów i marginesów, które przypada na każdy flex element służy
+        atrybut <code>flex: wartosc_numeryczna;</code> nadawana flex elementom.
+        Jeśli każdemu z nich nadamy taka samą wartość np, jeden, to elemnty będą
+        równej szerokości. Jesli następnie jednemu z tych elemntów nadamy wartość
+        dwa, to będzie on dwa razy szerszy od pozostałych.
+      </p>
+      <p>
+        Możemy też uzyć atrybutu <code>flex: 1 200px;</code> co spowoduje, że
+        flex element dostanie conajmniej 200px szerokości.
+        Jeśli, dla jednego z flex elemntów zdefiniujemy atrybut
+        <code>flex: 2 200px;</code>, to wszytkie elementy otrzymają po 200px
+        szerkości, a nastepnie pozostałe wolne miejsce w kontenerze zostanie
+        podzielone pomiedzy elementy proporcjonalnie do wartośi numerycznej atrybutu
+        flex.
+      </p>
+    </article>
+
+  </section>
+
+  <section class="align-items-center">
+    <article>
+      <h2>Wyrównanie wzgledem osi prostopadłej</h2>
+      <p>
+        Wyrównaniem flex elemntów mozęmy strować wzgledem dwóch osi. Osi głównej,
+        wzdłóż ktorej układane są elemnty oraz osi do niej prostopadłej.
+        Atrybut <code>align-items</code> struje tym jak rozlozone są elementy
+        wzgledem osi prostopadłej.
+      </p>
+      <p>
+        Wartością domyslną jest <code>stretch</code>.
+        W tym ustawieniu flex elemety rozciagaja sie na wymiar flex kontenera
+        i wszytskie są tak długie jak najdłuższy element.
+      </p>
+      <p>
+        Kolejną wartością tego atrybutu jest <code>center</code>.
+      </p>
+    </article>
+
+    <article>
+      <p>
+        Kolejną wartością tego atrybutu jest <code>center</code>.
+        W tym przypadku każdy elemet zachwuje swój własny wymiar. Elemety są
+        wrównywane do środka osi prostopadłej narzędzia flex.
+      </p>
+      <p>
+        Ponadto dla danego elemtu można nadpisywać spsób ich wyrównania,
+        używając atrybutu <code>align-self</code>.
+      </p>
+    </atricle>
+  </section>
+
+  <section class="justify-content-space-between">
+    <article>
+      <h2>Wyrównanie wzgledem osi głównej</h2>
+      <p>
+        Do sterownania wyrównaniem elementów wzdłóż osi głównej służy atrybut
+        <code>justify-content</code>. Wartością domyslną jest <code>flex-start</code>.
+        Inne to <code>flex-end</code>, <code>center</code>, <code>space-arround</code>,
+        <code>space-between</code>.
+      </p>
+    </article>
+    <article>
+      <p>
+        <code>space-arround</code> rozdziela miejsce po równo wzdłóz osi głównej
+        i zostawia nieco wolnej przestrzeni na końcu i na początku.
+      </p>
+    </article>
+    <article>
+      <p>
+        <p>
+          <code>space-between</code> rozdziela miejsce po równo wzdłóz osi głównej
+          ale nie zostawia przestrzeni ani końcu ani na początku.
+        </p>
+      </p>
+    </article>
+  </section>
+
+  <section>
+    <article>
+      <h2>Sterowanie kolejnością elementów</h2>
+      <p>
+        Flexbox umożliwia zmianę kolejności wyświetlenia elementów bez zmiany
+        kodu źródłowego strony.
+        Służy do tego atrybut <code>order</code>.
+      </p>
+    </article>
+    <article>
+      <p>
+        Element zostanie wyświetlony tym póżniej
+        im wyzsza wartość atrybutu <code>order</code>. Wartością domyślną jest
+        zero.
+      </p>
+      <p>
+        Wartością <code>order</code> może być dowlna liczba calkowita:
+        ..., -1, 0, 1, 2, ... .
+      </p>
+    </article>
+  </section>
+
+  <section>
+    <article>
+      <h2>Zagnieżdzanie</h2>
+      <p>
+        Uzywając Flexbox, możemy zagnieżdzać flex kontenery wewnątrz elemntów.
+        Wystarczy jeden z elementów uczynic kontenerem nadając mu atrybut
+        <code>display: flex</code>.
+      </p>
+    </article>
+    <article class="nestes-flexbox flex-flow-column">
+      <div>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      </div>
+      <div class="nestes-flexbox-2">
+        <p class="nestes-flexbox-2-elem">
+          Ten element ma zapewniona szerokosc conajmniej 200px. Jesli wraz
+          ze swym wspopotomkiem nie zmiesci sie w jednej linii, flexbox utworzy
+          na te elementy osobne linie.
+        </p>
+        <p class="nestes-flexbox-2-elem">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </p>
+      </div>
+    </article>
+  </section>
+</body>
+</html>
