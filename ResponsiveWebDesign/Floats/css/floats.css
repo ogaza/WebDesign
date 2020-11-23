@@ -1,0 +1,21 @@
+/* Border box declaration 
+https://www.paulirish.com/2012/box-sizing-border-box-ftw/ 
+
+poniższe deklaracje dla box-sizing
+mówią, ze atrybut widts odnosi sie
+do zawartości box'a paddingu i obramowania,
+a nie jak normalnie do samej zawartości
+*/
+
+html {
+    box-sizing: border-box;
+  }
+  /* inherit border-box on all elements in the universe and before and after
+   box-sizing nie jest automatycznie dziedziczony, dlatego musimy 
+   ustawic to automatyczne dziedziczenie dla naszej strony
+  */
+  *, 
+  *:before, 
+  *:after {
+    box-sizing: inherit;
+  }

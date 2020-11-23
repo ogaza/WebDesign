@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/floats.css">
+</head>
+<body>
+    <div>
+        <p>
+            Na tej stronie używamy 
+            <code>box-sizing: border-box;</code>
+            To zmienia sposób w jaki przegladarka interpretuje arybut <code>width</code>.
+            Normalnie odnosi sie od do samego kontentu box'a. Ale, gdy przechodzimy na 
+            <code>border-box</code> to width odnosi sie do kontentu, paddingu i obramowania włacznie.
+            <code>box-sizing</code> nie jest atrybutem atomatycznie dziedziczony przez potomne tagi.
+            dlatego na naszej stronie
+        </p>
+    </div>
+    <div class="wrapper">
+        <a href="..">powrót</a>
+        <!-- wiersz jeden - cztery boksy -->
+        <div>
+            <article>
+                Lorem ipsum dolor sit amet consectetur, 
+                adipisicing elit. Voluptatem qui recusandae, 
+                et officiis aut id beatae, possimus rerum atque 
+                officia vitae quam obcaecati provident perspiciatis.
+            </article>
+            <article>
+                Lorem ipsum dolor sit amet consectetur, 
+                adipisicing elit. Voluptatem qui recusandae, 
+                et officiis aut id beatae, possimus rerum atque 
+                officia vitae quam obcaecati provident perspiciatis.
+            </article>
+            <article>
+                Lorem ipsum dolor sit amet consectetur, 
+                adipisicing elit. Voluptatem qui recusandae, 
+                et officiis aut id beatae, possimus rerum atque 
+                officia vitae quam obcaecati provident perspiciatis.
+            </article>
+            <article>
+                Lorem ipsum dolor sit amet consectetur, 
+                adipisicing elit. Voluptatem qui recusandae, 
+                et officiis aut id beatae, possimus rerum atque 
+                officia vitae quam obcaecati provident perspiciatis.
+            </article>
+        </div>
+    </div>
+</body>
+</html>
