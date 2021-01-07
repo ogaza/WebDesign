@@ -19,3 +19,58 @@ html {
   *:after {
     box-sizing: inherit;
   }
+
+  .wrapper{
+    width: 97%;
+    max-width: 1200px;
+    margin: 0 auto;
+    float: none;
+    background-color: darkgray;
+  }
+
+.row::after{
+content: "";
+display: table;
+clear: both;
+}
+
+  .col-1{
+    background-color: darkseagreen;
+    float: left;
+    margin-left: 4%;
+    width: 20%;
+  }
+
+  .col-2{
+    background-color: lavender;
+    float: left;
+    margin-left: 4%;
+    width: 44%
+  }
+
+  .col-3{
+    background-color: lemonchiffon;
+    width: 92%;
+    margin-left: 4%;
+    float: none;
+  }
+
+  @media only screen and (min-width: 480px) and (max-width: 767px){
+    .col-1{
+      margin-top: 4%;
+      width: 44%
+    }
+
+    .col-2{
+      width: 92%;
+      margin-left: 4%;
+      float: none;
+    }
+  }
+
+  @media only screen and (max-width: 479px){
+    .col-1{
+      width: 92%;
+      float: none;
+    }
+  }
