@@ -45,7 +45,9 @@ na małych ekranach */
   margin-left: 4%;
   margin-right: 4%;
   margin-top: 2%;
-  /* jedna z wersji ie swiruje, jesli kontent jest pusty i nie ma wysokosci */
+  /* jedna z wersji ie swiruje, 
+     jesli kontent jest pusty 
+     i nie ma wysokosci */
   min-height: 1px;
 }
 
@@ -77,9 +79,9 @@ na małych ekranach */
   }
 
   /* klasa col-1-2
-  zajmuje caly wiersz przy najmnejszych ekranach
-  połowe wiersza przy srednich ekranach 
-  i 1/4 wiersza przy duzych
+     zajmuje caly wiersz przy najmnejszych ekranach
+     połowe wiersza przy srednich ekranach 
+     i 1/4 wiersza przy duzych
   */
   .col-1-2,
   .col-2 {
