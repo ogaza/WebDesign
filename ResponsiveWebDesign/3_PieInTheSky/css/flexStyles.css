@@ -25,6 +25,10 @@
   margin: 2% 0 2%;
 }
 
+footer p {
+  justify-content: center;
+}
+
 @media only screen and (min-width: 550px) {
   [class*='flex-col-'] {
     margin-right: 0;
