@@ -98,7 +98,6 @@ blockquote cite {
 footer {
   background-color: #00CDD1;
   color: white;
-  /* clear: both; */
   margin: 0 0.5em 3em 0.5em;
 }
 
@@ -123,9 +122,6 @@ footer a {
     max-width: 767px;
     float: none;
   }
-  /* div.row {
-    padding: 0 2em;
-  } */
 }
 
 /* Large devices (large desktops, 1200px and up) */
