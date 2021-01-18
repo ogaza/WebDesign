@@ -2,13 +2,15 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Document</title>
+	<title>Responsive imgs</title>
 </head>
 <body>
 	<!-- visit http://scottjehl.github.io/picturefill/ for picturefill source -->
 	<div class="bkgdimg"></div>
-	<div>
-		<img src="img/peace-pie-original.jpg" alt="The original giant peace pie">
-	</div>
+	<picture>
+		<source srcset="img/peace-pie-original.jpg" media="(min-width: 1200px)">
+		<source srcset="img/peace-pie-500.jpg" media="(min-width: 600px)">
+		<img src="img/peace-pie-150.jpg" alt="The original giant peace pie">
+	</picture>
 </body>
 </html>
