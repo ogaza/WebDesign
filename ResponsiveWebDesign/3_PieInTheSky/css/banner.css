@@ -1,0 +1,13 @@
+@media (min-width: 1px) {
+  .bkgdimg {
+    background-image: url(../img/header-850.jpg);
+    height: 50px;
+  }
+}
+
+@media (min-width: 851px) {
+  .bkgdimg {
+    background-image: url(../img/header-1200.jpg);
+    height: 183px;
+  }
+}

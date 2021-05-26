@@ -1,0 +1,102 @@
+html {
+    box-sizing: border-box;
+  }
+  /* inherit border-box on all elements in the universe and before and after
+   box-sizing nie jest automatycznie dziedziczony, dlatego musimy 
+   ustawic to automatyczne dziedziczenie dla naszej strony
+  */
+  *, 
+  *:before, 
+  *:after {
+    box-sizing: inherit;
+  }
+
+  .wrapper{
+    width: 97%;
+    max-width: 1200px;
+    margin: 0 auto;
+    float: none;
+    background-color: darkgray;
+  }
+
+.row {
+	display: flex;
+	flex-flow: row wrap;
+}
+
+[class*='col-'] {
+	flex: 0 0 92%;
+	margin: 2% 4% 2%;
+	/* jedna z wersji ie swiruje, 
+	   jesli kontent jest pusty 
+	   i nie ma wysokosci */
+	min-height: 1px;
+  }
+
+  .col-1-2-4 {
+	order: 1;
+  }
+
+  .col-1-2,
+  .col-1-2-4,
+  .col-1-4 {
+	background-color: #ffc;
+  }
+  
+  .col-2,
+  .col-2-4 {
+	background: #fcf;
+  }
+  
+  .col-3 {
+	background-color: #cff;
+  }
+  
+  .col-4 {
+	background-color: #ccf;
+  }
+
+  /* media queries  */
+/* mobile landscape  */
+@media only screen and (min-width: 480px) {
+	[class*='col-'] {
+	  margin-right: 0;
+	  min-height: 1px;
+	}
+
+	.col-1-2-4,
+	.col-2 {
+	  flex: 0 0 44%;
+	}
+  
+	.col-1-4,
+	.col-3,
+	.col-4 {
+		flex: 0 0 92%;
+	}
+}
+
+@media only screen and (min-width: 768px) {
+	.col-1-2-4 {
+		order: 0;
+	}
+
+	.col-1-2,
+	.col-1-2-4,
+	.col-1-4 {
+		flex: 0 0 20%;
+	}
+  
+	.col-2, 
+	.col-2-4 {
+		flex: 0 0 44%;
+	}
+  
+	.col-3 {
+		flex: 0 0 68%;
+	}
+  
+	.col-4 {
+		flex: 0 0 92%;
+	}
+  }

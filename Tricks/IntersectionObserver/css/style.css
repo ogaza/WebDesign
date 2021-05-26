@@ -1,0 +1,21 @@
+p {
+  margin: 0 0 10px;
+}
+
+.main {
+  position: relative;
+}
+
+.logo {
+
+  background-color: LightGray;
+
+  position: fixed;
+  height: 40px;
+  /* top: 0; */
+  /* width: 100%; */
+}
+
+.content {
+  margin: 40px 0 0;
+}

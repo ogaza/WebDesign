@@ -1,0 +1,115 @@
+/* Border box declaration 
+https://www.paulirish.com/2012/box-sizing-border-box-ftw/ 
+
+poniższe deklaracje dla box-sizing
+mówią, ze atrybut widts odnosi sie
+do zawartości box'a paddingu i obramowania,
+a nie jak normalnie do samej zawartości
+*/
+
+html {
+    box-sizing: border-box;
+  }
+  /* inherit border-box on all elements in the universe and before and after
+   box-sizing nie jest automatycznie dziedziczony, dlatego musimy 
+   ustawic to automatyczne dziedziczenie dla naszej strony
+  */
+  *, 
+  *:before, 
+  *:after {
+    box-sizing: inherit;
+  }
+
+  .wrapper{
+    width: 97%;
+    max-width: 1200px;
+    margin: 0 auto;
+    float: none;
+    background-color: darkgray;
+  }
+
+/* grid system */
+
+.row::after{
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* to jest podejscie mobile - frst
+czyli najpierw definiujemy zachowanie elemntów 
+na małych ekranach */
+
+[class*='col-'] {
+  width: 92%;
+  margin-left: 4%;
+  margin-right: 4%;
+  margin-top: 2%;
+  /* jedna z wersji ie swiruje, 
+     jesli kontent jest pusty 
+     i nie ma wysokosci */
+  min-height: 1px;
+}
+
+.col-1-2,
+.col-1-4 {
+  background-color: #ffc;
+}
+
+.col-2 {
+  background: #fcf;
+}
+
+.col-3 {
+  background-color: #cff;
+}
+
+.col-4 {
+  background-color: #ccf;
+}
+
+/* media queries  */
+
+/* mobile landscape  */
+@media only screen and (min-width: 480px) {
+  [class*='col-'] {
+    margin-right: 0;
+    min-height: 1px;
+    float: left;
+  }
+
+  /* klasa col-1-2
+     zajmuje caly wiersz przy najmnejszych ekranach
+     połowe wiersza przy srednich ekranach 
+     i 1/4 wiersza przy duzych
+  */
+  .col-1-2,
+  .col-2 {
+    width: 44%;
+  }
+
+  .col-1-4,
+  .col-3,
+  .col-4 {
+    width: 92%;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .col-1-2,
+  .col-1-4 {
+    width: 20%;
+  }
+
+  .col-2 {
+    width: 44%;
+  }
+
+  .col-3 {
+    width: 68%;
+  }
+
+  .col-4 {
+    width: 92%;
+  }
+}

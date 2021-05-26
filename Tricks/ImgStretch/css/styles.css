@@ -1,0 +1,31 @@
+/* .object-fit_contain { object-fit: contain }
+.object-fit_cover { object-fit: cover }
+.object-fit_none { object-fit: none }
+.object-fit_scale-down { object-fit: scale-down } */
+
+html { 
+  color: #eee; 
+  padding: 0;
+  font-family: 'Source Code Pro', Monaco;
+  background-color: #333;
+}
+
+.imageContainer {
+  position: absolute;
+  height: 130vh;
+  margin: 0;
+}
+
+.object-fit_fill { object-fit: fill }
+
+img { 
+  background-color: #444;
+  height: 100%; 
+  width: 100%;
+}
+
+/* img[class] { 
+  width: 100%;
+} */
+
+
