@@ -29,9 +29,10 @@ html {
 
 .item {
   position: absolute;
-  top: 25%;
-  left: 25%;
+  top: 30%;
+  left: 20%;
   border: 1px solid green;
+  background-color: #AAA;
 }
 
 
