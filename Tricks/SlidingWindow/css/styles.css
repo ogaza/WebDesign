@@ -1,0 +1,52 @@
+html { 
+  color: #eee; 
+  padding: 0;
+  font-family: 'Source Code Pro', Monaco;
+  background-color: #333;
+}
+
+.main {
+  border: 1px solid red;
+  width: 99vw;
+  height: 99vh;
+  overflow: hidden;
+}
+
+.imageContainer {
+  position: relative;
+  min-width: min-content;
+
+  /* Center image container */
+  /* top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); */
+}
+
+.bgImage {
+  min-width: 99vw;
+  min-height: 99vh;
+}
+
+.item {
+  position: absolute;
+  top: 30%;
+  left: 20%;
+  border: 1px solid green;
+  background-color: #AAA;
+}
+
+.slidingWindow {
+  background-color: white;
+  color: black;
+  position: fixed;
+  top: 20px;
+  left: 70%;
+  width: max-content;
+  transition: all ease-in-out 0.5s;
+}
+
+.slidingWindow--hidden {
+  left: 100%;
+}
+
+
