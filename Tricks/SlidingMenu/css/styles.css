@@ -1,0 +1,45 @@
+html { 
+  color: #eee; 
+  padding: 0;
+  font-family: 'Source Code Pro', Monaco;
+  background-color: #333;
+}
+
+body {
+  width: 99vw;
+  height: 99vh;
+  border: 1px solid red;
+}
+
+.menu {
+  position: relative;
+  min-width: min-content;
+  display: flex;
+  justify-content: space-between;
+}
+
+.subMenu {
+  position: relative;
+}
+
+.item {
+  background-color: #AAA;
+}
+
+.slidingItem {
+  background-color: white;
+  color: black;
+  left: -80px;
+  overflow: hidden;
+  position: absolute;
+  transition-property: left width;
+  transition: all ease-in-out 0.5s;
+  width: 80px;
+}
+
+.slidingItem--hidden {
+  left: 0;
+  width: 0px;
+}
+
+
