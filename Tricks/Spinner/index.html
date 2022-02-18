@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Img stretch</title>
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <style>
+    .frame {
+      box-sizing: border-box;
+      position: absolute;
+      top: 10px;
+      left: 20px;
+
+      border: 2px solid white;
+      border-radius: 50%;
+
+      width: 80px;
+      height: 80px;
+    }
+    .spinner {
+      box-sizing: border-box;
+
+      background-color: rgba(255, 0, 0, .2);
+      color: blue;
+
+      border-top: 2px solid red;
+      border-right: 2px solid red;
+      border-top-right-radius: 100%;
+
+      width: 40px;
+      height: 40px;
+
+      position: absolute;
+      top: 10px;
+      left: 60px;
+
+      transform-origin: bottom left;
+      /* animation: spin 2s cubic-bezier(.1,.5,.9,.5) infinite; */
+      animation: spin 1.5s cubic-bezier(.6,.9,.6,.3) infinite;
+    }
+
+    @keyframes spin {
+      0% {
+        transform: rotate(0deg); 
+      }
+      100% { 
+        transform: rotate(360deg); 
+      }
+    }
+
+    .dot {
+      position: absolute;
+
+      background-color: yellow;
+      border-radius: 50%;
+
+      width: 4px;
+      height: 4px;
+
+      top: 48px;
+      left: 58px;
+    }
+  </style>
+</head>
+<body>
+  <div class="main">
+    <div class="imageContainer">
+      <img class="bgImage" src="./img/pf.jpg">
+      <div class="item">
+        <a href="" class="item__link">open slide</a>
+      </div>
+      <!-- Frame -->
+      <div class="frame">
+      </div>
+      <!-- Spinner -->
+      <div class="spinner">
+      </div>
+      <!-- dot -->
+      <div class="dot">
+      </div>
+      <div class="slidingWindow slidingWindow--hidden">
+        <p>This is sliding window</p>
+      </div>
+    </div>
+  </div>
+  <script type="text/javascript" src="./js/bundle.js"></script>
+</body>
+</html>
