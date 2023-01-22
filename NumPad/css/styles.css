@@ -1,0 +1,131 @@
+html { 
+  color: #eee; 
+  padding: 0;
+  font-family: 'Source Code Pro', Monaco;
+  background-color: #333;
+}
+
+body {
+  width: 99vw;
+  height: 99vh;
+  border: 1px solid red;
+  font-family: 'Open Sans', sans-serif;
+}
+
+@media (min-width: 768px) {
+  main {
+    margin: auto;
+    width: 50%;
+    max-width: 800px;
+    /* height: 50%; */
+  }
+}
+
+.numpad {
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.75rem;
+
+  background-color: white;
+  padding: 0.75rem;
+}
+
+.numpad-display {
+  display: grid;
+  grid-gap: 0.25rem;
+  grid-template-columns: repeat(3, 4fr) 5fr;
+  
+  background-color: white;
+  color: black;
+  min-height: 65px;
+  padding: 0.25rem;
+}
+
+.numpad-display__value, .numpad-display__buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.numpad-display__value {
+  grid-column: 1/4;
+  justify-content: flex-start;
+
+  border-bottom: 2px #97a0ab solid;
+  color: #202832;
+  font-size: 2.8em;
+}
+
+.numpad-display__buttons {
+  border-bottom: 2px transparent solid;
+}
+
+.numpad-display__button {
+  background-color: #0053b8;
+  border-radius: 50%;
+  color: white;
+  cursor: pointer;
+  font-weight: 600;
+  min-height: 64px;
+  min-width: 64px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.numpad-display__button:hover {
+  opacity: 0.9;
+}
+
+.numpad-buttons {
+  display: grid;
+  grid-gap: 0.25rem;
+  grid-template-columns: repeat(3, 4fr) 5fr;
+
+  background-color: white;
+  padding: 0.25rem;
+}
+
+.numpad-button {
+  background-color: #0053b8;
+  cursor: pointer;
+
+  border-radius: 0.25rem;
+  border-radius: 4px;
+  text-align: center;
+
+  font-size: 28px;
+  font-weight: 600;
+  min-height: 70px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.numpad-button:hover {
+  opacity: 0.9;
+}
+
+.numpad-button--0 {
+  grid-row: 4/5;
+  grid-column: 1/3;
+}
+
+.numpad-button--dot {
+  grid-row: 4/5;
+  grid-column: 3/4;
+}
+
+.numpad-button--back {
+  grid-row: 1/2;
+  grid-column: 4/5;
+}
+
+.numpad-button--ok {
+  grid-row: 2/5;
+  grid-column: 4/5;
+}
+
+
