@@ -1,0 +1,33 @@
+/* default styling, no changes needed here */
+
+/* set the layout to border box model */
+html {
+  box-sizing: border-box;
+}
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+/* set font family and background gradient */
+body {
+  padding: 0;
+  border: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* Turn off margin, set by browser */
+figure {
+  margin: 0;
+  padding: 0;
+}
+/* caption styling  */
+figcaption {
+  background-color: #001219;
+  color: white;
+  padding: 1rem;
+}
+/* reduces the top margin on the h2, bottom on the p, and leaves a 0.5rem gap between the two */
+figcaption * {
+  margin: 0.5rem;
+}
