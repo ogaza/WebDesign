@@ -1,0 +1,61 @@
+/* set the layout to border box model */
+html {
+  box-sizing: border-box;
+  background-color: #333;
+}
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+/* set font family and background gradient */
+body {
+  padding: 0;
+  border: 0;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+  margin: 1rem;
+}
+
+header,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: Nobile, Arial, Helvetica, sans-serif;
+  font-weight: 500;
+}
+/* section > h1 {
+  color: #9ea9c1;
+} */
+/* header styles */
+header {
+  font-weight: 400;
+}
+header h1 {
+  margin: 0;
+  font-weight: 400;
+  color: #c85028;
+}
+header h2 {
+  font-weight: 400;
+}
+
+a {
+  color: #c85028;
+  font-weight: bold;
+  text-decoration: none;
+}
+a:hover {
+  color: #7e64be;
+}
+
+a.a--back,
+a.a--back:visited {
+  color: white;
+}

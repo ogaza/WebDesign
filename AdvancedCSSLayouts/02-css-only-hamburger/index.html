@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <!-- <script src="https://kit.fontawesome.com/fb7f6f30e4.js"></script> -->
+    <script src="https://kit.fontawesome.com/d9edc1cd11.js" crossorigin="anonymous"></script>
+    <link
+      href="https://fonts.googleapis.com/css?family=Nobile:400,500|Open+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <title>02-css-only-hamburger</title>
+    <link rel="stylesheet" href="css/start.css" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/nav.css" />
+  </head>
+  <body>
+    <header>
+      <div class="row">
+        <a href="#main-menu" class="menu-toggle" id="main-menu-toggle"
+          ><span class="fa fa-bars"></span
+        ></a>
+        <div class="logo">
+          <h1>LayOut Times</h1>
+        </div>
+      </div>
+      <nav id="main-menu" class="main-menu">
+        <a href="#main-menu-toggle" class="menu-close">
+          <span class="fa fa-xmark"></span>
+        </a>
+        <ul>
+          <li><a href="#">CSS Resources</a></li>
+          <li><a href="#">Design</a></li>
+          <li><a href="#">Videos</a></li>
+        </ul>
+      </nav>
+      <!-- make the whole page clickable to close the menu -->
+      <a href="#main-menu-toggle" class="backdrop" hidden></a>
+    </header>
+    <a href="../" class="a--back">back</a>
+  </body>
+</html>
