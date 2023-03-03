@@ -1,0 +1,55 @@
+/*
+   Now set desktop behavior -- MQ value is set to where the navigation starts to wrap
+  */
+@media (min-width: 768px) {
+  /* header and nav borders rearranged for desktop */
+  header,
+  main {
+    border: none;
+    margin: 0;
+  }
+  nav {
+    border-top: 4px solid #9ea9c1;
+    border-bottom: 1px solid #dddddd;
+  }
+  /* fa-bars and fa-close not needed on desktop so hide them */
+  .menu-toggle,
+  .main-menu .menu-close {
+    display: none;
+  }
+
+  /* Undo positioning of off-canvas menu - remember this is hidden by default. Default position property is static, i.e. normal flow */
+  .main-menu {
+    display: block;
+    position: static;
+    width: auto;
+  }
+  /* Undo off-canvas styling */
+  .main-menu ul {
+    padding: 0;
+    height: auto;
+    width: auto;
+    text-align: center;
+  }
+  /* display the li's horizontally */
+  .main-menu li {
+    display: inline-block;
+  }
+
+  /* undo off canvas style */
+  .main-menu li:first-child a {
+    border-top: none;
+  }
+  /* desktop assumes a pointer display */
+  .main-menu a {
+    color: #c85028;
+    border-bottom: none;
+  }
+  /* Remove background from off-canvas styling, change colors */
+  .main-menu a:hover,
+  .main-menu a:focus {
+    background: none;
+    color: #7e64be;
+    text-decoration: none;
+  }
+}
