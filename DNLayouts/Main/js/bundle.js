@@ -1,17 +1,13 @@
 (function (window, document) {
-  //   var rippledEl = document.querySelector('.ripple-using-bg-image');
-  //   rippledEl?.addEventListener('mousedown', handleEvent);
-  //   rippledEl?.addEventListener('touchstart', handleEvent);
-
   var button = document.querySelector('.forecourt__toggle-button');
-  button.addEventListener('click', handleEvent);
+  button.addEventListener('click', handleToggleForeourtBtnClick);
 
-  function handleEvent(e) {
-    // var app = document.querySelector(':root');
+  function handleToggleForeourtBtnClick(e) {
     var app = document.querySelector('.app-container');
     var forecourt = document.querySelector('.forecourt');
 
-    const showForecourt = getComputedStyle(app).getPropertyValue('--show-forecourt') || 0;
+    const showForecourt =
+      getComputedStyle(app).getPropertyValue('--show-forecourt') || 0;
     const showForecourtValue = parseInt(showForecourt);
     console.log('showForecourt: ', showForecourtValue);
 
@@ -23,7 +19,17 @@
 
     app.style.setProperty('--show-forecourt', newShowForecourtValue);
     forecourt.setAttribute('data-state', newShowForecourtState);
-    // app.setAttribute('data-forecourt-state', newShowForecourtState);
+  }
+
+  var button = document.querySelector('.admin-panel__toggle-button');
+  button.addEventListener('click', handleAdminPanelToggleBtnClick);
+
+  function handleAdminPanelToggleBtnClick(e) {
+    var forecourt = document.querySelector('.admin-panel');
+
+    const currentState = forecourt.getAttribute('data-state') ?? 'closed';
+    const newState = currentState === 'closed' ? 'open' : 'closed';
+    forecourt.setAttribute('data-state', newState);
   }
 
   // function setState() {

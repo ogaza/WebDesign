@@ -5,22 +5,78 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Web Design Examples</title>
     <style>
+      :root {
+        font-family: 'Open Sans', sans-serif;
+      }
+
+      ul {
+        padding: 0;
+        /* margin: 0; */
+      }
+
       a {
-        display: block;
+        display: inline-block;
+      }
+
+      .sections {
+        display: grid;
+        row-gap: 1rem;
+
+        list-style: none;
+      }
+
+      .content {
+        list-style: none;
+      }
+
+      @media (min-width: 768px) {
+        .sections {
+          grid-template-columns: repeat(3, 250px);
+        }
       }
     </style>
   </head>
   <body>
-    <div>
-      <a href="Pozycjonowanie">Pozycjonowanie</a>
-      <a href="WebDesignForDevelopers">Web Design for Developers</a>
-      <a href="ResponsiveWebDesign">Responsywny układ stron</a>
-      <a href="Tricks">Triki z Ameryki</a>
-      <a href="NumPad">NumPad</a>
-      <a href="DNLayouts">DNLayouts</a>
-      <a href="Grid">Grid</a>
-      <a href="CssGridFlexboxV2">CssGridFlexboxV2</a>
-      <a href="AdvancedCSSLayouts">AdvancedCSSLayouts</a>
-    </div>
+    <ul class="sections">
+      <li>
+        <ul class="content">
+          <lh>Old</lh>
+          <li>
+            <a href="Pozycjonowanie">Pozycjonowanie</a>
+          </li>
+          <li>
+            <a href="WebDesignForDevelopers">Web Design for Developers</a>
+          </li>
+          <li>
+            <a href="ResponsiveWebDesign">Responsywny układ stron</a>
+          </li>
+          <li>
+            <a href="Tricks">Triki z Ameryki</a>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <ul class="content">
+          <lh>New</lh>
+          <li>
+            <a href="Grid">Grid</a>
+          </li>
+          <li>
+            <a href="CssGridFlexboxV2">CssGridFlexboxV2</a>
+          </li>
+          <li>
+            <a href="AdvancedCSSLayouts">AdvancedCSSLayouts</a>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <ul class="content">
+          <lh>DN</lh>
+          <li>
+            <a href="DNLayouts">DNLayouts</a>
+          </li>
+        </ul>
+      </li>
+    </ul>
   </body>
 </html>
