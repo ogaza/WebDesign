@@ -1,0 +1,17 @@
+#app {
+  --bg-color: white;
+  background-color: var(--bg-color);
+  transition: background-color 0.3s;
+
+  &[data-state='loading'] {
+    --bg-color: rgb(150, 195, 235);
+  }
+
+  &[data-state='error'] {
+    --bg-color: rgb(231, 117, 117);
+  }
+
+  &[data-state='success'] {
+    --bg-color: rgb(148, 190, 151);
+  }
+}

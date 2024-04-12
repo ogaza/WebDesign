@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>states</title>
+  </head>
+  <body>
+    <form class="ui-form" data-state="subscribe">
+      <input class="ui-input" type="email" placeholder="your@email.com" />
+      <button class="ui-button" type="button">
+        <span data-show="subscribe">Subscribe</span>
+        <span data-show="subscribing">Subscribing</span>
+        <span data-show="success">Success!</span>
+        <span data-show="error">Error</span>
+      </button>
+    </form>
+    <div id="app">
+      <div class="button ripple" role="button">
+        <span>Click me</span>
+      </div>
+    </div>
+    <a class="button button--back" href="./..">back</a>
+  </body>
+</html>
