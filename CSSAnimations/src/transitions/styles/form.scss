@@ -1,0 +1,65 @@
+.ui-form {
+  background: #fff;
+  box-shadow: 0 0.5rem 1rem #0003;
+  padding: 1rem;
+  border-radius: 0.25rem;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  grid-template-rows: 1fr;
+  grid-column-gap: 1rem;
+  grid-template-areas: 'input button';
+
+  --color: var(--color-gray);
+  // this defines styling for any child element being fucused
+  &:focus-within {
+    --color: var(--color-blue);
+  }
+}
+
+.ui-input {
+  grid-area: input;
+  padding: 0 1rem;
+  height: var(--input-height);
+  border: 2px solid var(--color);
+  border-radius: 0.25rem;
+  outline: none;
+
+  // we change the color of the input smoothly
+  // remeber not to animate things like border-size
+  // which would trigger layout change and would
+  // not be very performant
+  transition-property: border-color;
+  transition-duration: 0.3s;
+}
+
+.ui-button {
+  grid-area: button;
+  border: none;
+  padding: 0 1rem;
+  color: white;
+  font-weight: bold;
+  border-radius: 0.25rem;
+  height: var(--input-height);
+  background-color: var(--color);
+
+  transition-property: background-color, opacity, transform;
+  transition-duration: 0.3s;
+
+  &:hover {
+    opacity: 0.5;
+  }
+
+  &:active {
+    // persent user in translate relates to the size of
+    // the element itself not the size of its parent
+    transform: translateY(5%);
+  }
+}
+
+[data-show]:not([data-active]) {
+  display: none;
+}
+
+.ui-form {
+  overflow: hidden;
+}

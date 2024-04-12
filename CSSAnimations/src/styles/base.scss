@@ -1,0 +1,56 @@
+:root {
+  --app-bg-color: #e4e9f0;
+}
+
+html {
+  background-color: var(--app-bg-color);
+}
+
+body {
+  margin: 0;
+  font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  position: relative;
+}
+
+a {
+  margin-top: 0.5rem;
+}
+
+input,
+button {
+  font-size: inherit;
+  appearance: none;
+}
+
+figure {
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  margin: 0;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+// reduce or no-preference
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0s !important;
+    transition-duration: 0s !important;
+  }
+}
