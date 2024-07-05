@@ -1,0 +1,22 @@
+html {
+  box-sizing: border-box;
+}
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+body {
+  font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+  margin: 1rem;
+}
+header,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: Nobile, Arial, Helvetica, sans-serif;
+  font-weight: 500;
+}

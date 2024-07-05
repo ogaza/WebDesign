@@ -1,0 +1,65 @@
+main {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  --columns: 16;
+}
+
+/* ========================================================= */
+/* mobile */
+section {
+  --width: 16;
+  --basis: calc(var(--width) / var(--columns) * 100%);
+  /* --gap: calc((var(--columns) - var(--width)) * 0.3%); */
+  /*
+  gap between columns should be 
+  1rem 
+  in case if in a row are several columns
+  0
+  in case if a row has only one column
+  */
+  --gap: calc(min(var(--columns) - var(--width), 1) * 1rem);
+
+  flex-basis: calc(var(--basis) - var(--gap));
+}
+
+@media only screen and (min-width: 950px) {
+  main {
+    --columns: 14;
+  }
+
+  #first {
+    --width: 5;
+  }
+
+  #main {
+    --width: 6;
+  }
+
+  /* in this resolution we want 
+  devs to be in a separate row
+  so we put in at the of the flex
+  */
+  #devs {
+    --width: 14;
+    order: 2;
+  }
+
+  #resources {
+    --width: 3;
+  }
+}
+
+/* ========================================================= */
+/* wide screen */
+@media only screen and (min-width: 1200px) {
+  main {
+    --columns: 16;
+  }
+
+  /* bring back the normal the width and ordering */
+  #devs {
+    --width: 2;
+    order: unset;
+  }
+}
