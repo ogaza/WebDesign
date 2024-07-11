@@ -23,9 +23,9 @@ section {
   flex-basis: calc(var(--basis) - var(--gap));
 }
 
-@media only screen and (min-width: 950px) {
+@media only screen and (min-width: 768px) {
   main {
-    --columns: 14;
+    --columns: 11;
   }
 
   #first {
@@ -34,6 +34,12 @@ section {
 
   #main {
     --width: 6;
+  }
+}
+
+@media only screen and (min-width: 950px) {
+  main {
+    --columns: 14;
   }
 
   /* in this resolution we want 
