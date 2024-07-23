@@ -69,3 +69,34 @@ section {
     order: unset;
   }
 }
+
+/* devs -------------------------------- */
+#devs ul {
+  display: flex;
+  flex-flow: row wrap;
+  gap: 1rem;
+
+  --columns: 2;
+}
+
+#devs ul li {
+  /*
+  we have n elems so there is n - 1 gaps between them in a flex row
+  therefore in order to calculate an elems width
+  we take 100% minus n - 1 gaps
+  and divde that by n
+  */
+  flex-basis: calc((100% - (var(--columns) - 1) * 1rem) / var(--columns));
+}
+
+@media only screen and (min-width: 768px) {
+  #devs ul {
+    --columns: 5;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  #devs ul {
+    --columns: 1;
+  }
+}
