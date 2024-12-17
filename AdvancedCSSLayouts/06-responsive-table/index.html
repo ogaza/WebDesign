@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0 user-scalable=no"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>06-responsive-table</title>
+    <link rel="stylesheet" href="styles/base.css" />
+    <link rel="stylesheet" href="styles/table.css" />
+  </head>
+  <body>
+    <main>
+      <div
+        class="tablescroll"
+        role="region"
+        aria-labelledby="factsheet"
+        tabindex="0"
+      >
+        <table id="planetdata">
+          <caption id="factsheet">
+            Planetary Fact Sheet - Metric
+          </caption>
+          <thead>
+            <tr>
+              <th scope="col">Planet Name</th>
+              <th scope="col">Mass (10<sup>24</sup>kg)</th>
+              <th scope="col">Diameter (km)</th>
+              <th scope="col">Rotation Period (hours)</th>
+              <th scope="col">Length of Day (hours)</th>
+              <th scope="col">Distance from Sun (10<sup>6</sup> km)</th>
+              <th scope="col">Orbital Period (days)</th>
+              <th scope="col">Mean Temp (C)</th>
+              <th scope="col">Number of Moons</th>
+              <th scope="col">Ring System?</th>
+              <th scope="col">Global Magnetic Field?</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Mercury</td>
+              <td>0.33</td>
+              <td>4879</td>
+              <td>1407.6</td>
+              <td>4222.6</td>
+              <td>57.9</td>
+              <td>88.0</td>
+              <td>167</td>
+              <td>0</td>
+              <td>No</td>
+              <td>Yes</td>
+            </tr>
+            <tr>
+              <td>Venus</td>
+              <td>4.87</td>
+              <td>12,104</td>
+              <td>-5832.5</td>
+              <td>2802</td>
+              <td>108.2</td>
+              <td>224.7</td>
+              <td>464</td>
+              <td>0</td>
+              <td>No</td>
+              <td>No</td>
+            </tr>
+            <tr>
+              <td>Earth</td>
+              <td>5.97</td>
+              <td>12,756</td>
+              <td>23.9</td>
+              <td>24</td>
+              <td>149.6</td>
+              <td>365.2</td>
+              <td>15</td>
+              <td>1</td>
+              <td>No</td>
+              <td>Yes</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </main>
+
+    <a href="../" class="a--back">back</a>
+  </body>
+</html>

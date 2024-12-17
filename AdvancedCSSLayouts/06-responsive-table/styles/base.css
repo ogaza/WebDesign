@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css?family=Nobile:400,500|Open+Sans&display=swap');
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+  line-height: 1.45;
+  color: #333;
+}
+
+p {
+  margin-bottom: 1.25em;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  /* margin: 2.75rem 0 1rem; */
+  font-family: 'Nobile', sans-serif;
+  font-weight: 500;
+  line-height: 1.15;
+}
