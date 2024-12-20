@@ -13,10 +13,15 @@ main {
 /* Force table to not be like tables anymore */
 table,
 thead,
-tbody,
 th,
 tr {
   display: block;
+}
+
+tbody {
+  display: flex;
+  flex-flow: column;
+  row-gap: 1rem;
 }
 
 /* 
@@ -27,6 +32,10 @@ thead tr {
   position: absolute;
   top: -9999px;
   left: -9999px;
+}
+
+table {
+  border-collapse: collapse;
 }
 
 tr {
