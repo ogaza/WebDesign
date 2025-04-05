@@ -1,0 +1,27 @@
+body {
+  font-family: 'Libre Franklin', sans-serif;
+  line-height: 1.5;
+  margin: 0;
+  padding: 0;
+}
+
+p {
+  background-color: antiquewhite;
+  border: 2px solid black;
+  padding: 0.5rem;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.container.autoFit {
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+}
+
+.container.autoFill {
+  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+}
