@@ -1,0 +1,41 @@
+* {
+  margin: 0;
+}
+
+body {
+  font-family: 'Libre Franklin', sans-serif;
+  padding: 0;
+}
+
+img {
+  max-width: 100%;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(150px, 1fr));
+  /* 
+  the 1fr is to push the header of the card below 
+  to the bottom of the picture 
+  */
+  grid-template-rows: auto auto 1fr;
+  gap: 0.5rem;
+
+  padding: 0.5rem;
+}
+
+.card {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: subgrid;
+  grid-row: span 3;
+}
+
+.card--main {
+  grid-row: span 6;
+  grid-column: span 2;
+}
+
+.card--main img {
+  grid-row: span 3;
+}
