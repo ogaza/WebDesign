@@ -12,10 +12,14 @@
   </head>
   <body>
 
-    <img src="img/fem-moons-large.jpg" alt="Io, Europa, Ganymede, and Callisto, showing relative size." />
-    <img src="img/fem-moons-med.jpg" alt="Io, Europa, Ganymede, and Callisto, showing relative size." />
-    <img src="img/fem-moons-small.jpg" alt="Io, Europa, Ganymede, and Callisto, showing relative size." />
-    <img src="img/fem-moons-default.jpg" alt="Io, Europa, Ganymede, and Callisto, showing relative size." />
+    <picture>
+      <source srcset="img/fem-moons-large.jpg" media="(min-width: 1200px)" />
+      <source srcset="img/fem-moons-med.jpg" media="(min-width: 900px)" />
+      <source srcset="img/fem-moons-small.jpg" media="(min-width: 600px)" />
+
+      <!-- the default picture  -->
+      <img src="img/fem-moons-default.jpg" alt="Io, Europa, Ganymede, and Callisto, showing relative size." />
+    </picture>
 
   </body>
 </html>
