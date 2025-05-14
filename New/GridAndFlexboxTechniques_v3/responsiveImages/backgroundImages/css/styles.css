@@ -1,0 +1,28 @@
+* {
+  margin: 0;
+}
+
+body {
+  font-family: 'Libre Franklin', sans-serif;
+  padding: 0;
+}
+
+img {
+  max-width: 100%;
+}
+
+/* set the backgroungimage with madia querys */
+
+body {
+  background-image: url("../img/800.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+
+}
+
+@media (min-width: 1024px) {
+  body {
+    background-image: url("../img/1024.jpg");
+  }
+}
