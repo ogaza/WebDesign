@@ -1,0 +1,10 @@
+:root {
+  --dark-theme: false;
+}
+
+@container style(--dark-theme: true) {
+  .themed {
+    background-color: black;
+    color: white;
+  }
+}
