@@ -1,0 +1,7 @@
+/* add border box sizing to the page right from the start */
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
