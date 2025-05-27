@@ -1,0 +1,33 @@
+.colors {
+  display: flex;
+}
+
+.colors > * {
+  width: 3rem;
+  height: 3rem;
+}
+
+.lime {
+  background-color: var(--lime);
+}
+.magenta {
+  background-color: var(--magenta);
+}
+.magenta50 {
+  background-color: var(--magenta50);
+}
+.white {
+  background-color: var(--white);
+}
+.tan {
+  background-color: var(--tan);
+}
+.teal {
+  background-color: var(--teal);
+}
+.cyan {
+  background-color: var(--cyan);
+}
+.black {
+  background-color: var(--black);
+}
