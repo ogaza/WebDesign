@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Poppins:400');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&amp;display=swap');
 
 :root {
   --base-size: 1rem;
@@ -9,6 +9,8 @@
   --h3: calc(var(--h4) * var(--scale));
   --h2: calc(var(--h3) * var(--scale));
   --h1: calc(var(--h2) * var(--scale));
+
+  --sans-serif: 'Poppins', sans-serif;
 }
 
 html {
@@ -16,9 +18,11 @@ html {
 } /*16px*/
 
 body {
-  font-family: 'Poppins', sans-serif;
-  font-weight: 400;
+  font-family: var(--sans-serif);
+  font-weight: 300;
   line-height: 1.75;
+  background-color: var(--teal);
+  color: var(--white);
   font-size: var(--base-size);
 }
 

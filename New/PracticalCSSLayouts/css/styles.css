@@ -7,3 +7,17 @@ html {
 *:after {
   box-sizing: inherit;
 }
+
+body {
+  background-color: var(--teal);
+  color: var(--white);
+}
+
+a {
+  color: var(--lime);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--cyan);
+}
