@@ -21,3 +21,12 @@ a {
 a:hover {
   color: var(--cyan);
 }
+
+.club {
+  font-size: var(--h5);
+}
+
+img {
+  width: 100%;
+  max-width: 100%;
+}
