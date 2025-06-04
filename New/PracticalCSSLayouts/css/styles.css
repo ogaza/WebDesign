@@ -1,32 +1,61 @@
-/* add border box sizing to the page right from the start */
-html {
-  box-sizing: border-box;
-}
-*,
-*:before,
-*:after {
-  box-sizing: inherit;
+@layer base {
+  /* add border box sizing to the page right from the start */
+  html {
+    box-sizing: border-box;
+  }
+  *,
+  *:before,
+  *:after {
+    box-sizing: inherit;
+  }
+
+  body {
+    background-color: var(--teal);
+    color: var(--white);
+    text-align: center;
+  }
+
+  a {
+    color: var(--lime);
+    text-decoration: none;
+  }
+
+  a:hover {
+    color: var(--cyan);
+  }
+
+  .club {
+    font-size: var(--h5);
+  }
+
+  img {
+    width: 100%;
+    max-width: 100%;
+  }
 }
 
-body {
-  background-color: var(--teal);
-  color: var(--white);
+@layer header {
+  .wrapper {
+    margin: 0 auto;
+    max-width: 425px;
+    border: 1px solid white;
+  }
+
+  header {
+    padding: 3rem 0 2rem;
+  }
+
+  header img {
+    max-width: 200px;
+  }
 }
 
-a {
-  color: var(--lime);
-  text-decoration: none;
-}
-
-a:hover {
-  color: var(--cyan);
-}
-
-.club {
-  font-size: var(--h5);
-}
-
-img {
-  width: 100%;
-  max-width: 100%;
+@layer tour {
+  .date {
+    color: var(--tan);
+  }
+  .club {
+    color: var(--lime);
+    font-size: var(--h5);
+  }
 }
