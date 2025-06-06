@@ -51,6 +51,11 @@
   main {
     margin-bottom: 3rem;
   }
+
+  footer {
+    text-transform: uppercase;
+    margin-top: 5rem;
+  }
 }
 
 @layer header {
