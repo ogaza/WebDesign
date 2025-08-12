@@ -62,7 +62,7 @@
   .wrapper {
     margin: 0 auto;
     max-width: 425px;
-    border: 1px solid white;
+    /* border: 1px solid white; */
   }
 
   header {
@@ -81,6 +81,28 @@
 }
 
 @layer tour {
+
+  main > * {
+    /* border: 1px solid white; */
+  }
+
+  @media (min-width: 768px) {
+    main {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    main h1 {
+      grid-column: 1 / 4;
+      /* grid-column: 1 / span 3; */
+    }
+
+    main p {
+      margin-bottom: 1rem;
+    }
+  }
+
+
   .date {
     color: var(--tan);
   }
@@ -96,5 +118,13 @@
 
   .star {
     width: 18px;
+  }
+
+  @media (min-width: 768px) {
+    aside {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+    }
   }
 }
