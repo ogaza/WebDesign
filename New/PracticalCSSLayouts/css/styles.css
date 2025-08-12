@@ -72,6 +72,12 @@
   header img {
     max-width: 200px;
   }
+
+  @media (min-width: 768px) {
+    .wrapper {
+      max-width: 800px;
+    }
+  }
 }
 
 @layer tour {
