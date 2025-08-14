@@ -128,3 +128,36 @@
     }
   }
 }
+
+
+@media (min-width: 1024px) {
+  .wrapper {
+    max-width: 1200px;
+
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 2rem 0;
+  }
+
+  .wrapper header {
+    /* grid-column: 1/2; */
+  }
+
+  .wrapper .banner {
+    grid-column: 1/2;
+  }
+
+  .wrapper main {
+    grid-column: 2/3;
+    grid-row: 2/5;
+    display: block;
+  }
+
+  .wrapper aside {
+    /* grid-column: 1/2; */
+  }
+
+  .wrapper footer {
+    /* grid-column: 1/2; */
+  }
+}
