@@ -1,7 +1,7 @@
-import '../styles/base.scss';
+import '../styles/base.css';
 import './appStates';
 import './formStates';
-import './styles/appStates.scss';
-import './styles/button.scss';
-import './styles/formStates.scss';
-import './styles/style.scss';
+import './styles/appStates.css';
+import './styles/button.css';
+import './styles/formStates.css';
+import './styles/style.css';

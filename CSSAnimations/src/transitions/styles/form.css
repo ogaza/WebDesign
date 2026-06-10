@@ -10,7 +10,7 @@
   grid-template-areas: 'input button';
 
   --color: var(--color-gray);
-  // this defines styling for any child element being fucused
+  /* this defines styling for any child element being fucused */
   &:focus-within {
     --color: var(--color-blue);
   }
@@ -24,10 +24,10 @@
   border-radius: 0.25rem;
   outline: none;
 
-  // we change the color of the input smoothly
-  // remeber not to animate things like border-size
-  // which would trigger layout change and would
-  // not be very performant
+  /* we change the color of the input smoothly
+  remeber not to animate things like border-size
+  which would trigger layout change and would
+  not be very performant */
   transition-property: border-color;
   transition-duration: 0.3s;
 }
@@ -50,8 +50,8 @@
   }
 
   &:active {
-    // persent user in translate relates to the size of
-    // the element itself not the size of its parent
+    /* persent user in translate relates to the size of
+    the element itself not the size of its parent */
     transform: translateY(5%);
   }
 }

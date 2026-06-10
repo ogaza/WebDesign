@@ -19,7 +19,7 @@ const keyframes = [
 ];
 
 const timing = {
-  duration: 500,
+  duration: 300,
   iterations: 1
 };
 
@@ -29,7 +29,7 @@ export function getAnimatePulse() {
     const [x, y] = eventCoordinates;
 
     const pulses = htmlElement.querySelectorAll('.pulse__element');
-    const pulse = pulses[idx++ % 5];
+    const pulse = pulses[idx++ % 3];
 
     const boundingClientRect = htmlElement.getBoundingClientRect();
     x && pulse.style.setProperty('--x', `${x - boundingClientRect.left}px`);

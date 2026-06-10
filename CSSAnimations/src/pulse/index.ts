@@ -1,3 +1,3 @@
-import '../styles/base.scss';
+import '../styles/base.css';
 import './scripts/pulse';
-import './index.scss';
+import './index.css';

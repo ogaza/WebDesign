@@ -1,8 +1,8 @@
-import '../styles/base.scss';
-import './styles/ball.scss';
-import './styles/button.scss';
-import './styles/formAnimations.scss';
-import './styles/style.scss';
+import '../styles/base.css';
+import './styles/ball.css';
+import './styles/button.css';
+import './styles/formAnimations.css';
+import './styles/style.css';
 
 var button = document.getElementsByClassName('ui-button')[0];
 button.addEventListener('click', handleEvent);

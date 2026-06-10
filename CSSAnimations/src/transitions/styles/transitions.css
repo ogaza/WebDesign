@@ -1,0 +1,53 @@
+:root {
+  --easing: cubic-bezier(0.5, 0, 0.5, 1);
+  --duration: 1.5s;
+
+  --color-gray: #8c97b7;
+  --color-blue: #1c38f1;
+  --color-green: #1fcdb0;
+  --input-height: 3rem;
+}
+
+.ball {
+  width: 3rem;
+  height: 3rem;
+  /* width: 5rem;
+  height: 5rem; */
+  border-radius: 50%;
+  background-color: red;
+
+  transition-property: background-color, transform, opacity;
+  /* in transitiin duration we may say how long should the transition take
+  to different css properties. here we have 500ms for background-color,
+  but 2 s for the transform */
+  transition-duration: 500ms, 2s, 4s;
+  /* the default function (depending on a browser) is usually 'ease'
+  any way there are properties - like background color
+  for which its best to stick with the default timing function
+  Same as with transition-duration we can specify different
+  functions for different properties */
+  transition-timing-function: ease;
+  /* transition-timing-function: ease, linear; */
+
+  /* there is a shorthand notation for transition functionality
+  transition: [property] [duration] [timing-function] [delay]
+  but in fact only important thing is to keep the order of the duration and
+  the delay. css will figure out the other things */
+
+  &:hover {
+    background-color: blue;
+    opacity: 0.2;
+    transform: scale(2);
+
+    /* we can overwrite all the transition poperties based on element state
+    for example when an element is hovere we can make the transition delay */
+    /* transition-delay: 500ms;
+    transition-property: background-color; */
+  }
+}
+
+.ball-container {
+  width: 8rem;
+  height: 6rem;
+  overflow: hidden;
+}
