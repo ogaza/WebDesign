@@ -58,7 +58,8 @@ html {
 .login-container {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 1fr 1fr;
+  /* grid-template-rows: 1fr 1fr; */
+  /* gap: 0.5rem; */
 }
 
 .login-form {
@@ -66,12 +67,17 @@ html {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
+  padding: 0.5rem 0 0.25rem;
 }
 
 .login-form {
   form {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+    /* display: flex;
+    flex-direction: column; */
   }
 }
 
@@ -79,6 +85,8 @@ html {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 0.5rem;
+
+  padding: 0.5rem 0 0.25rem;
 }
 
 /* display ====================================== */

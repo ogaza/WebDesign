@@ -3,25 +3,62 @@
 }
 
 .login-form {
-  animation: move-up var(--duration) both;
-
+  background-color: white;
   z-index: 3;
 }
 
 .login-keyboard {
-  /* animation: move-down var(--duration) both;
-  animation: show-up 2s both; */
-
-  animation-name: move-down, show-up;
-  animation-duration: 1s, 2s;
-
-  /* background-color: aqua; */
-
+  background-color: white;
   z-index: 2;
 }
 
+.login-container {
+  & .login-form {
+    transform: translateY(50%);
+  }
 
-@keyframes move-up {
+  & .login-keyboard {
+    transform: translateY(-50%);
+  }
+}
+
+.login-container[data-state='inactive'] {
+  & .login-form {
+    animation: login-form-move-down var(--duration);
+  }
+
+  & .login-keyboard {
+    animation-name: keyboard-move-up;
+    animation-duration: 1s;
+    /* animation-name: keyboard-move-up, disappear;
+    animation-duration: 1s, 2s; */
+  }
+}
+
+.login-container[data-state='active'] {
+  & .login-form {
+    animation: login-form-move-up var(--duration);
+  }
+
+  & .login-keyboard {
+    /* animation-name: keyboard-move-down; */
+    /* animation-duration: 1s; */
+    animation-name: keyboard-move-down, appear;
+    animation-duration: 1s, 2s;
+  }
+}
+
+.login-container[data-state='active'] {
+  & .login-form {
+    transform: none;
+  }
+
+  & .login-keyboard {
+    transform: none;
+  }
+}
+
+@keyframes login-form-move-up {
   from {
     transform: translateY(50%);
   }
@@ -31,22 +68,52 @@
   }
 }
 
-@keyframes move-down {
+@keyframes login-form-move-down {
+  from {
+    transform: none;
+  }
+
+  to {
+    transform: translateY(50%);
+  }
+}
+
+@keyframes keyboard-move-down {
   from {
     transform: translateY(-50%);
   }
-  
+
   to {
     transform: translateY(0%);
   }
 }
 
-@keyframes show-up {
+@keyframes keyboard-move-up {
+  from {
+    transform: translateY(0%);
+  }
+
+  to {
+    transform: translateY(-50%);
+  }
+}
+
+@keyframes appear {
   from {
     opacity: 0;
   }
-  
+
   to {
     opacity: 1;
+  }
+}
+
+@keyframes disappear {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
   }
 }
