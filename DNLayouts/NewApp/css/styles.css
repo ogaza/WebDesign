@@ -1,0 +1,109 @@
+html {
+  box-sizing: border-box;
+  background-color: #333;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+/* typography ====================================== */
+:root {
+  font-family: 'Open Sans', sans-serif;
+}
+
+/* heights ====================================== */
+
+:root {
+  --app-height: 100vh;
+  --status-bar-height: 64px;
+}
+
+.app-container {
+  height: var(--app-height);
+}
+
+/* grid and layout ====================================== */
+
+.app-container {
+  display: grid;
+  grid-template-columns: 5fr 7fr;
+}
+
+.panel__left {
+  grid-column: 1/2;
+
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr;
+}
+
+.panel__right {
+  grid-column: 2/3;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.login-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-form {
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.login-keyboard {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 0.5rem;
+}
+
+/* display ====================================== */
+
+/*  colors ====================================== */
+:root {
+  --app-bg-color: #e4e9f0;
+  --default-background: #ffffff;
+  --status-bar-bg-color: #0053b8;
+  --status-bar-text-color: #ffffff;
+}
+
+.panel__left {
+  background-color: #0053b8;
+}
+
+.r1 {
+  background-color: #5394e4;
+}
+
+
+.panel__right {
+  background-color: var(--default-background)
+}
+
+/* component styling ====================================== */
+
+/* component states */

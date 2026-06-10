@@ -1,0 +1,52 @@
+.login-container {
+  --duration: 1s;
+}
+
+.login-form {
+  animation: move-up var(--duration) both;
+
+  z-index: 3;
+}
+
+.login-keyboard {
+  /* animation: move-down var(--duration) both;
+  animation: show-up 2s both; */
+
+  animation-name: move-down, show-up;
+  animation-duration: 1s, 2s;
+
+  /* background-color: aqua; */
+
+  z-index: 2;
+}
+
+
+@keyframes move-up {
+  from {
+    transform: translateY(50%);
+  }
+
+  to {
+    transform: none;
+  }
+}
+
+@keyframes move-down {
+  from {
+    transform: translateY(-50%);
+  }
+  
+  to {
+    transform: translateY(0%);
+  }
+}
+
+@keyframes show-up {
+  from {
+    opacity: 0;
+  }
+  
+  to {
+    opacity: 1;
+  }
+}
