@@ -58,6 +58,7 @@ html {
 .login-container {
   display: grid;
   grid-template-columns: 1fr;
+  /* background-color: #5394e4; */
   /* grid-template-rows: 1fr 1fr; */
   /* gap: 0.5rem; */
 }
@@ -110,6 +111,14 @@ html {
 
 .panel__right {
   background-color: var(--default-background)
+}
+
+.login-form {
+  background-color: var(--default-background);
+}
+
+.login-keyboard {
+  background-color: var(--default-background);
 }
 
 /* component styling ====================================== */

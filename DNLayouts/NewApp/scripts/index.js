@@ -1,13 +1,17 @@
 window.addEventListener('DOMContentLoaded', startTheApp);
 
+var app;
 var form;
 var loginContainer;
 
 // the DOM is loaded
 function startTheApp() {
+  app = document.querySelector('.app-container');
   form = document.forms.myForm;
+  loginContainer = document.querySelector('.login-container');
+
   form.addEventListener('submit', handleFormSubmit);
-  addClickHandlerToLeftPanel();
+  app.addEventListener('mousedown', handleMousedown);
 }
 
 function handleFormSubmit(event) {
@@ -16,40 +20,44 @@ function handleFormSubmit(event) {
   // TODO Here the data can be sent to the server
 }
 
-function addClickHandlerToLeftPanel() {
-  loginContainer = document.querySelector('.login-container');
-  loginContainer.addEventListener('focusin', handlePanelFocus);
-  //   var panel = document.querySelector('.panel__right');
-  //   panel.addEventListener('click', handlePanelClick);
-}
+function handleMousedown(e) {
+  var [eventX, eventY] = getEventCoordinates(e);
+  const boundingClientRect = loginContainer.getBoundingClientRect();
 
-function handlePanelFocus(e) {
-  setState(e.type);
-}
+  var isX = 
+    eventX > boundingClientRect.left && 
+    eventX < boundingClientRect.right;
+  var isY = 
+    eventY > boundingClientRect.top &&
+    eventY < boundingClientRect.bottom;
 
-function setState(action) {
-  var loginContainer = document.querySelector('.login-container');
-  const currentState = loginContainer.getAttribute('data-state') ?? 'inactive';
+  if(isX && isY){
+    loginContainer.setAttribute('data-state', 'active');
 
-  const newState = getNewStateFor(currentState, action);
-  console.log('setting state: ', newState);
-
-  loginContainer.setAttribute('data-state', newState);
-}
-
-function getNewStateFor(currentState, action) {
-  return machine.states[currentState].on[action];
-}
-
-const machine = {
-  initial: 'inactive',
-  states: {
-    inactive: {
-      on: { focusin: 'active', focusout: 'inactive' }
-    },
-    active: {
-      //   on: { CLICK: 'inactive' }
-      on: { focusin: 'active', focusout: 'inactive' }
-    }
+    return;
   }
-};
+
+  const currentState = 
+    loginContainer.getAttribute('data-state') ?? 'inactive';
+ 
+    loginContainer.setAttribute(
+      'data-state', 
+      currentState == 'active' 
+        ?'inactive'
+        :'active');
+}
+
+export function getEventCoordinates(e) {
+  switch (e.type) {
+    case 'mousedown':
+      return [e.clientX, e.clientY];
+    case 'touchstart': {
+      const x = e.touches[0].clientX;
+      const y = e.touches[0].clientY;
+
+      return [x, y];
+    }
+    default:
+      return [];
+  }
+}

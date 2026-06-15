@@ -1,0 +1,59 @@
+@keyframes login-form-move-up {
+  from {
+    transform: translateY(50%);
+  }
+
+  to {
+    transform: none;
+  }
+}
+
+@keyframes login-form-move-down {
+  from {
+    transform: none;
+  }
+
+  to {
+    transform: translateY(50%);
+  }
+}
+
+@keyframes keyboard-move-down {
+  from {
+    transform: translateY(-50%);
+  }
+
+  to {
+    transform: translateY(0%);
+  }
+}
+
+@keyframes keyboard-move-up {
+  from {
+    transform: translateY(0%);
+  }
+
+  to {
+    transform: translateY(-50%);
+  }
+}
+
+@keyframes appear {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes disappear {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}

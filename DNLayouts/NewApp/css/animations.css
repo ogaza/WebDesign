@@ -1,25 +1,13 @@
 .login-container {
-  --duration: 1s;
+  --duration: 700ms;
 }
 
 .login-form {
-  background-color: white;
   z-index: 3;
 }
 
 .login-keyboard {
-  background-color: white;
   z-index: 2;
-}
-
-.login-container {
-  & .login-form {
-    transform: translateY(50%);
-  }
-
-  & .login-keyboard {
-    transform: translateY(-50%);
-  }
 }
 
 .login-container[data-state='inactive'] {
@@ -29,9 +17,7 @@
 
   & .login-keyboard {
     animation-name: keyboard-move-up;
-    animation-duration: 1s;
-    /* animation-name: keyboard-move-up, disappear;
-    animation-duration: 1s, 2s; */
+    animation-duration: var(--duration);
   }
 }
 
@@ -41,10 +27,8 @@
   }
 
   & .login-keyboard {
-    /* animation-name: keyboard-move-down; */
-    /* animation-duration: 1s; */
     animation-name: keyboard-move-down, appear;
-    animation-duration: 1s, 2s;
+    animation-duration: var(--duration), calc(2 * var(--duration));
   }
 }
 
@@ -58,62 +42,12 @@
   }
 }
 
-@keyframes login-form-move-up {
-  from {
+.login-container {
+  & .login-form {
     transform: translateY(50%);
   }
 
-  to {
-    transform: none;
-  }
-}
-
-@keyframes login-form-move-down {
-  from {
-    transform: none;
-  }
-
-  to {
-    transform: translateY(50%);
-  }
-}
-
-@keyframes keyboard-move-down {
-  from {
+  & .login-keyboard {
     transform: translateY(-50%);
-  }
-
-  to {
-    transform: translateY(0%);
-  }
-}
-
-@keyframes keyboard-move-up {
-  from {
-    transform: translateY(0%);
-  }
-
-  to {
-    transform: translateY(-50%);
-  }
-}
-
-@keyframes appear {
-  from {
-    opacity: 0;
-  }
-
-  to {
-    opacity: 1;
-  }
-}
-
-@keyframes disappear {
-  from {
-    opacity: 1;
-  }
-
-  to {
-    opacity: 0;
   }
 }
