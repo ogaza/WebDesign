@@ -1,6 +1,6 @@
-.login-keyboard {
+.login-numpad {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr auto;
   gap: 0.25rem;
 
   padding: 0.5rem 0 0.25rem;

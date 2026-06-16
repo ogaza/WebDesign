@@ -2,52 +2,52 @@
   --duration: 700ms;
 }
 
-.login-form {
+.login-form-container {
   z-index: 3;
 }
 
-.login-keyboard {
+.login-keyboard-container {
   z-index: 2;
 }
 
 .login-container[data-state='inactive'] {
-  & .login-form {
+  & .login-form-container {
     animation: login-form-move-down var(--duration);
   }
 
-  & .login-keyboard {
+  & .login-keyboard-container {
     animation-name: keyboard-move-up;
     animation-duration: var(--duration);
   }
 }
 
 .login-container[data-state='active'] {
-  & .login-form {
+  & .login-form-container {
     animation: login-form-move-up var(--duration);
   }
 
-  & .login-keyboard {
+  & .login-keyboard-container {
     animation-name: keyboard-move-down, appear;
     animation-duration: var(--duration), calc(2 * var(--duration));
   }
 }
 
 .login-container[data-state='active'] {
-  & .login-form {
+  & .login-form-container {
     transform: none;
   }
 
-  & .login-keyboard {
+  & .login-keyboard-container {
     transform: none;
   }
 }
 
 .login-container {
-  & .login-form {
+  & .login-form-container {
     transform: translateY(50%);
   }
 
-  & .login-keyboard {
+  & .login-keyboard-container {
     transform: translateY(-50%);
   }
 }

@@ -48,40 +48,6 @@ html {
   justify-content: center;
 }
 
-.login-section {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.login-container {
-  display: grid;
-  grid-template-columns: 1fr;
-  /* background-color: #5394e4; */
-  /* grid-template-rows: 1fr 1fr; */
-  /* gap: 0.5rem; */
-}
-
-.login-form {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-
-  padding: 0.5rem 0 0.25rem;
-}
-
-.login-form {
-  form {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 0.5rem;
-    /* display: flex;
-    flex-direction: column; */
-  }
-}
-
 /* display ====================================== */
 
 /*  colors ====================================== */
@@ -103,14 +69,6 @@ html {
 
 .panel__right {
   background-color: var(--default-background)
-}
-
-.login-form {
-  background-color: var(--default-background);
-}
-
-.login-keyboard {
-  background-color: var(--default-background);
 }
 
 /* component styling ====================================== */

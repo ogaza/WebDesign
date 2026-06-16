@@ -1,0 +1,40 @@
+.login-panel {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  /* background-color: #5394e4; */
+  /* grid-template-rows: 1fr 1fr; */
+  /* gap: 0.5rem; */
+}
+
+.login-form-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  padding: 0.5rem 0 0.25rem;
+}
+
+.login-form-container .login-form {
+
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.5rem;
+  /* display: flex;
+flex-direction: column; */
+}
+
+.login-form-container {
+  background-color: var(--default-background);
+}
+
+.login-numpad {
+  background-color: var(--default-background);
+}
