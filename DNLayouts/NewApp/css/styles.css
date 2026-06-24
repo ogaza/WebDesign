@@ -15,6 +15,11 @@ html {
 }
 
 /* heights ====================================== */
+@property --main-grd-var {
+  syntax: "<string>";
+  inherits: true;
+  initial-value: "one";
+}
 
 :root {
   --app-height: 100vh;
@@ -28,8 +33,19 @@ html {
 /* grid and layout ====================================== */
 
 .app-container {
+  --main-grd-var: "one";
   display: grid;
-  grid-template-columns: 5fr 7fr;
+  grid-template-columns:
+    if(
+      style(--main-grd-var: "one"):
+        5fr 7fr;
+      style(--main-grd-var: "two"):
+        7fr 5fr;
+      else: 
+        1fr 1fr
+    );
+  /* grid-template-columns: 5fr 7fr; */
+  /* grid-template-columns: var(--xxx) var(--yyy); */
 }
 
 .panel__left {
